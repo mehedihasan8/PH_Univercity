@@ -1,11 +1,12 @@
 import "./App.css";
-import UserInfoWithUseReducer from "./components/UserInfoWithUseReducer";
+import TodoForm from "./components/todo/TodoForm";
+import TodoProvider from "./context/TodoProvider";
 
 function App() {
   return (
-    <div className="border border-purple-500 p-6 m-10">
-      <UserInfoWithUseReducer />
-    </div>
+    <TodoProvider>
+      <TodoForm />
+    </TodoProvider>
   );
 }
 
