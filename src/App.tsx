@@ -1,13 +1,14 @@
+import { useState } from "react";
 import "./App.css";
-import CounterWithClass from "./components/CounterWithClassComponent";
 import CounterWithFunComponent from "./components/CounterWithFunComponent";
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
-    <>
-      <CounterWithClass />
-      <CounterWithFunComponent />
-    </>
+    <div className="border border-purple-500 p-6 m-10">
+      <p>count = {count}</p>
+      <CounterWithFunComponent count={count} setCount={setCount} />
+    </div>
   );
 }
 
