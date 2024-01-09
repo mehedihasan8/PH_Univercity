@@ -1,3 +1,5 @@
+import ChildComponent from "./ChildComponent";
+
 type Tprops = {
   count: number;
   setCount: React.Dispatch<React.SetStateAction<number>>;
@@ -12,6 +14,7 @@ const CounterWithFunComponent = ({ count, setCount }: Tprops) => {
       >
         {count}
       </button>
+      <ChildComponent count={count} />
     </div>
   );
 };
